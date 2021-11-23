@@ -1,0 +1,369 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\title{Modern Physics}
+\date{October 2021}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Introduction to Modern Physics}
+
+\begin{itemize}
+    \item Classical Physics (1400-1900): heliocentric model, force laws, electromagntism, classical mechanics etc. 
+    \item Modern Physics (1900-today): special \& general relativity, quantum mechanics, big bang, particle physics etc.
+    \item Classical Physics faced several crises \begin{itemize}
+        \item Galilean relativity didnt define a preferred reference frame
+        \item Photoelectric effect 
+        \item Nature of electromagnetism
+        \item Ultraviolet catastrophe
+        \item Speed of light constant?
+    \end{itemize}
+    \item Hints of modern physics \begin{itemize}
+        \item emergence on "quanta" explained Photoelectric effect
+    \end{itemize}
+    \item Special relativity motivated by constant $c$ 
+\end{itemize}
+
+\section{Introduction to Special Relativity}
+
+\begin{itemize}
+    \item Galilean principle of relativity \begin{itemize}
+        \item Cant tell whether you are in uniform motion or at rest wrt another observer
+        \item The laws of nature are the same in a laboratory moving relative to an observer or a laboratory at rest
+    \end{itemize}
+    \item Inertial reference frame \begin{itemize}
+        \item a reference frame where Newton's law of inertia holds
+    \end{itemize}
+    \item Concept of Simultaniety \begin{itemize}
+        \item Observers in different inertial frames agree on simultaneous "events"
+    \end{itemize}
+    \item Nature insists that light has the same speed regardless of reference frame (this is a well established fact)
+    \item Consider a train (3 cars) that has a flash bulb in the centre of the train and two photo cells and clocks at each end \begin{itemize}
+        \item Clocks will record light pulse at $\Delta t_{train} = \frac{d}{2c}$ where $d$ is the length of the train
+    \end{itemize}
+    \item Now consider the train in motion so that its length is now $d'$ \begin{itemize}
+        \item Flashes going forward and backward travel at $c$ in the observer's reference frame
+        \item Since the train is moving forward, light will reach the back of the train first i.e. not simultaneous
+        \item Clocks don't appear synchronized
+    \end{itemize}
+    \item What happens to the length? \begin{itemize}
+        \item Conclude that distances perpendicular to relative motion don't change between inertial frames. 
+    \end{itemize}
+    \item Clocks at rest \& in motion \begin{itemize}
+        \item Light clock using light bouncing from end of metre stick to another
+        \item In rest frame of metre stick, a tick is $\frac{2m}{c}$. 
+        \item In our frame, light travels further so that $\Delta t' = \Delta t \gamma$ where $\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}$
+        \item Called time dilation
+        \item Conclusion: Any clock relative to us is keeping time at a different rate
+    \end{itemize}
+    \item What happens with distances parallel to velocity? \begin{itemize}
+        \item After some algebra and using $t'$, we get $l' = l \cdot \sqrt{1 - \frac{v^2}{c^2}} = \frac{l}{\gamma}$
+        \item Phenomena known as Lorentz contraction!
+    \end{itemize}
+    \item GPS: Example of time dilation \begin{itemize}
+        \item Time slip per day relative to the transmitter on the ground is around 5 $\mu$ s
+        \item Synchronization of time is important since the precision is of order $ > 100 ns$. 
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Lorentz Transformations}
+
+\begin{itemize}
+    \item In rest frame of ruler, bulb flashes at $t=0$ and ruler has length $l$ so $\Delta t  =\frac{l}{C}$. 
+    \item In the observer's frame, metre stick is travelling to the left with velocity $v$. First, metre stick is Lorentz contracted with $l' = l \sqrt{1 - \frac{v^2}{c^2}}$. \begin{itemize}
+        \item When flash detected, clock reads $\frac{l}{c}$.
+        \item But time to go from bulb to detector in observer frame is $\Delta t' = \frac{l \sqrt{1 - \frac{v}{c}}}{c \sqrt{1 + \frac{v}{c}}}$
+        \item Clocks run slowly when moving so observed elapsed time is $\Delta t' \sqrt{1 - \frac{v^2}{c^2} } = \frac{l}{c} - \frac{lv}{c^2}$
+    \end{itemize}
+    \item Summary \begin{itemize}
+        \item Time in a frame moving wrt rest frame is shifted proportional to time and distance
+        \item Distances in a frames moving wrt rest frame shifted proportional to time and distance
+        \item Leads to Lorentz transformation equations: \begin{itemize}
+            \item $ct' = \gamma (ct - \beta x)$
+            \item $x' = \gamma (x - \beta ct)$ 
+            \item Note:  $\beta = \frac{v}{c}$
+        \end{itemize}
+    \end{itemize}
+    \item General approach to 4 vector transformations \begin{itemize}
+        \item Define a 4-vector $x = (ct, x, y, z)$
+        \item Define "boost matrix" from frame $S$ to $S'$ moving along x-axis with speed $v$: $B = \begin{bmatrix}
+            \gamma & -\gamma \beta & 0 & 0 \\
+            -\gamma \beta & \gamma & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1 \\
+        \end{bmatrix}$
+        \item Use matrix algebra to transform $x$
+        \item Space time 4 vector defines "event"
+        \item typically use inertial frames with relative velocity in $x$ direction
+        \item $\gamma \geq 1$ at all times
+        \item set of all Lorentz matrices form a group
+    \end{itemize}
+    \item Minkowski diagrams are a graphical approach \begin{itemize}
+        \item One dimension is the x axis (scaled by c units of light-s)
+        \item Use time in seconds
+        \item Define axes in boosted frame by lines of constant $\frac{x'}{c}$ and $t'$. 
+        \item Angle to axes in rest frame of observer given by velocity of boosted frame
+        \item Specifically, the angle formed between events is $\theta = \tan^{-1} (\frac{v}{c})$
+        \item More details and graphs in the lecture notes
+    \end{itemize}
+\end{itemize}\
+
+\section{Apparent Paradoxes in Special Relativity}
+
+\begin{itemize}
+    \item Simultaniety now depends on the inertial frame \begin{itemize}
+        \item Simultaniety is relative i.e. simulataneous events in a rest frame are not simulataneous in an inertial frame in motion
+        \item But when 2 events coincide in space and time, observers have to agree
+    \end{itemize}
+    \item Pole in the barn problem \begin{itemize}
+        \item In rest frame, barn has a length $L_b'$ and a pole with length $L_p$ where $L_b' < L_p$
+        \item Runner with the pole running at a velocity $v$
+        \item From the runner's perspective, the length of the barn is too short - even shorter when Lorentz contracted
+        \item Let $t = t' = 0$ be when pole enters barn
+        \item In runners frame, barn is Lorentz contracted so time when pole hits other end of barm $t_{front} = \frac{L_b}{v} = \frac{L_b'}{v} \cdot \frac{1}{\gamma}$
+        \item At that point, back of pole sticks out of barn with length $L_p - L_b' \cdot \frac{1}{\gamma}$
+        \item Time when back of pole enters barn in runners frame is $t_{back} = \frac{L_p}{v}$
+        \item In the barn frame, pole is Lorentz contracted so time when pole hits other end of the barn is $t'_{front} = t_{front} \cdot \gamma$
+        \item Observer sees time dilation in pole's rest frame
+        \item Back of pole doesnt stick out of the barn
+        \item Time back of pole enters barn in barn frame is $t'_{back} = \frac{L_p}{v} \cdot \frac{1}{\gamma}$
+        \item All of pole is in barn at the same time
+        \item In runner's frame, there is time dilation so $t_{back} = \frac{L_p}{v}$
+    \end{itemize}
+    \item Twin Paradox \begin{itemize}
+        \item Two twins one that is earth bound (Alice) and other (Berta) which takes a rocket trip returning to earth
+        \item Who is older? Alice knows time dilation occurs on the rocket so will she be older? Berta knows time dilation occurs on Earth so is she older?
+        \item Minkowski diagram provides the answer
+        \item Earth time is dilated according to Berta
+        \item But turning around at the planet, puts Berta in a non-inertial accelerating frame. 
+        \item Time on Earth runs faster as rocket ship turns around
+        \item So Alice is older
+    \end{itemize}
+    \item Relativistic Doppler Shift \begin{itemize}
+        \item Special Relativity affects light frequencies
+        \item Consider waves with frequency $f_s$ in source frame with receiver moving away
+        \item Period and wavelength of waves emitted by source in rest frame $\Delta t_s = \frac{1}{f_s}$, $\lambda_s =\frac{c}{f_s}$
+        \item But receiver moves so time interval at receiver $\Delta t_r$ satisfies: $\lambda_s + v \Delta t_r = c \Delta t_r$ so $\Delta t_r = \frac{1}{f_s(1-\beta)}$ where $\beta = \frac{v}{c}$
+        \item But there is time dilation in receiver frame so that $\Delta t_r' = \Delta t_r \sqrt{1-\beta^2} = \frac{1}{f_s} \sqrt{\frac{1+\beta}{1-\beta}}$
+        \item Can use relativistic doppler shifts to measure the expansion of universe \begin{itemize}
+            \item Use doppler shift of distant supernovae to measure speed of recession
+            \item Define redshift as $z = \frac{\lambda_r - \lambda_s}{\lambda_s} = \frac{\lambda_r}{\lambda_s} - 1 = \frac{f_s}{f_r} - 1$
+        \end{itemize}
+    \end{itemize}
+
+
+
+\end{itemize}
+
+\section {Four-vectors, Lorentz invariants, Relativistic Energy and Momentum}
+
+\begin{itemize}
+    \item General approach to 4-vector transformations \begin{itemize}
+        \item Start with spacetime 4-vector $x = (ct, x, y, z)$
+        \item Define boost matrix $B$
+        \item Use matrix algebra to transform $x' = Bx$
+        \item Assumes inertial frames have relative velocity in $x$ direction
+        \item Lorentz factor $\gamma$ is always $\geq 1$
+        \item The inverse of $B$ is Lorentz transformation in the opposite direction
+        \item Many kinds of 4-vectors e.g. energy-Momentum, charge and current density, electric and magnetic potential
+    \end{itemize}
+    \item Lorentz transformations classify observables \begin{itemize}
+    \item Lorentz scalars
+    \item Lorentz vectors
+    \item Tensors (e.g. Faraday Tensor)
+    \item Useful to introduce metric tensor
+    \item GO OVER THE NOTES AGAIN AND UPDATE
+    \end{itemize}
+    \item Using relativistic energies and momenta \begin{itemize}
+        \item 4-vector momentum is $p = (\frac{E}{c}, p_x, p_y, p_z)$ 
+        \item Quantity $m$ is the "rest mass" i.e. mass of object in its rest frame
+        \item Specific to each particle
+        \item For massless particles $\frac{E}{c} = p$. 
+        \item Lorentz invariant of 4-momentum is $p^T \eta p = (\frac{E}{c})^2 - p_x^2 - p_y^2 - p_z^2 = (m \gamma)^2(c^2-v_x^2-v_y^2-v_z^2) = (mc \gamma)^2 \left( 1 - \frac{v_x^2+v_y^2+v_z^2}{c^2} \right) = m^2c^2$
+        \item This can also be seen by looking at this in the rest frame $p^T \eta p = (\frac{E}{c})^2 = m^2c^2 \Rightarrow E = mc^2$
+    \end{itemize}
+\end{itemize}
+
+
+\section{Light Cones in Minkowski Diagrams}
+
+\begin{itemize}
+    \item ADD IMAGE FROM THE LEC SLIDES
+    \item When considering 4-momentum, we can generalize Minkowski diagram to momentum space
+    \item Defined as 4-D space with axes $\frac{E}{c}, p_x, p_y, p_z$
+    \item The "mass shell" defines the physical region for a massive particle. Hyperboloid defines possible energy-momentum values of a particle
+    \item Gives a heuristic way of looking at energy and momentum correlations
+\end{itemize}
+
+\section{Introduction to Quantum Mechanics}
+\begin{itemize}
+    \item Look at how light interacts with matter
+    \item Black-body radiation became the stumbling block \begin{itemize}
+        \item Walls emit radiation but also have to absorb radiation
+        \item If walls black, then equal at all wavelengths
+        \item However spectrum of radiation in box depends on temperature
+    \end{itemize}
+    \item Planck first noted quantization as the solution
+    \item Particle nature of light was a second challenge
+\end{itemize}
+
+\section{Photoelectric Effect and Compton Scattering} 
+\begin{itemize}
+    \item Photoelectric effect was discovered in 1887 \begin{itemize} and was the first evidence for light acting as a particle
+        \item Observed that metals appeared to release free charges when exposed to UV light
+        \item Observed sparking happened at lower voltage across two metal plates
+        \item Other features include negative particles being emitted from metal, requirement of a minimum frequency of light and the energy of charged particles being dependent on the metal
+    \end{itemize}
+    \item Measure proerties of photoelectrons \begin{itemize}
+        \item Can measure energy of electrons given off as a function of frequency 
+        \item Minimum energy needed to free electron ins called the "work energy"
+    \end{itemize}
+    \item Einstein applied quanta to problem \begin{itemize}
+        \item Hypothesised that light consists of particles \begin{itemize}
+            \item Each had quanta of energy $h \nu$
+            \item Work function was energy binding electrons to metal
+            \item Photoelectron created when $h \nu > W$
+        \end{itemize}
+    \end{itemize}
+    \item Compton scattering was a 2nd early application of QM \begin{itemize}
+        \item X-rays can produce electrons 
+        \item There was a shift in the frequency of the incident atom and the recoiled atom
+        \item Assume an elastic collision of photon with electron at rest with photon 4-momentum $(\frac{\omega}{c}, k)$
+        \item $E = \bar{h} \omega$, $p = (p_x, p_y, p_z) = hk = h(k_x, k_y, k_z)$ 
+        \item Note: $\bar{h} = \frac{h}{2 \pi}$
+        \item Assume the binding energy of an electron is negligible
+        \item Use conservation of energy-momentum to find "Compton shift": $\bar{h} \omega' = \frac{\bar{h} \omega}{1 + \frac{h}{m_c c^2}(1 - \cos \theta)}$
+        \item This formula works when we don't take the binding energy of electron into account
+        \item Maximum energy order of magnitude is $2 keV$
+    \end{itemize}
+    \item Compton scattering calculation employs 4-vectors \begin{itemize}
+        \item $p_{\gamma} = (\frac{hw}{c}, hk), p_e = (cm, 0)$ for incoming particles and $p'_{\gamma} = (\frac{hw'}{c}, hk'), p'_e = (\frac{E'}{c}, p'_e)$ for the outgoing particles
+        \item Use conservation of momentum
+        \item Ends up leading to Compton shift equation which we had before
+        \item $\frac{2 \pi h}{m_e c}$ is the Compton wavelength of an electron
+    \end{itemize}
+\end{itemize}
+
+\section{Atomic Spectra}
+
+\begin{itemize}
+    \item Light interacts strongly with matter \begin{itemize}
+        \item Light absorption in a material
+        \item Light reflection \& diffraction
+        \item Absorption except for specific wavelengths
+        \item Emission when matter is emitting energy
+        \item Absorption spectrum and emission spectrum when combined form the complete spectrum
+        \item The light coming through has not been affected by the gas while the black region is because of light interacting and being emitted everywhere
+    \end{itemize}
+    \item Empirical Relationship between emission \begin{itemize}
+        \item Hydrogen discharge lamp: send current through a lap and light at specific wavelengths is generated
+        \item Wavelengths measured in visible spectrum are 656, 486, 434 and 410 nm
+        \item Relates to the Rydberg constant
+    \end{itemize}
+    \item This led to several different models for atoms \begin{itemize}
+        \item Rutherford-Bohr model with electrons surrounding nucleus in orbit was basis for modern theory of atomic structure
+    \end{itemize}
+    \item Bohr model started with four postulates \begin{itemize}
+        \item The Coulomb force on an electron provides the force needed to keep it into orbit
+        \item The angular momentum is quantized: $L = \bar{h}n$
+        \item An electron in a stationary orbit doesn't radiate
+        \item Emission or absorption of radiation causes an electron to move from one orbital to the next
+        \item The radius of the electron orbit can be predicted using the first two postulates. 
+        \item The Bohr radius is the size of the lowest energy electron orbit
+    \end{itemize}
+    \item "Stationary states" explained spectra nicely \begin{itemize}
+        \item Rutherford-Bohr model with stationary states explained atomic spectra
+        \item the problem was that classical physis could not describe these states
+        \item This set for the introduction of quantum wave mechanics
+    \end{itemize}
+
+\end{itemize}
+\section {de Broglie Waves}
+
+\begin{itemize}
+    \item The problem of making a particle a wave \begin{itemize}
+        \item Photons demonstrated both wave and particle properties
+        \item The frequency of light wave is proportional to its momentum
+        \item Has clear diffraction properties 
+        \item Has clear particle properties: Photoelectric effect and compton Scattering
+        \item But actual particles (like electrons) behave like particles. They can be localized and have particle like trajectories - predictable and exact
+        \item The Sommerfeld-Bohr model of the atoms was seen as the place to start
+        \item Uses the kinematics of electrons in orbits: $\frac{mv^2}{r} = \frac{Ze^2}{r^2}$ and $mvr = n \bar{h}$
+        \item Using $n \lambda = 2 \pi r_n$, we got $n \lambda = \frac{2 \pi n \bar{h}}{mv}$ so that $\lambda = \frac{h}{p}$ where $p$ is the momentum of the electron
+    \end{itemize}
+    \item Matter waves appear to be very small \begin{itemize}
+        \item The challenge with a matter wave is the scale set by Planck's constant
+        \item When calculating the momentum, there is an additional unit of $c$
+        \item The de Broglie wavelength is $1.23 \times 10^{-9} m$
+    \end{itemize}
+    \item Davison and Germer demonstrate matter waves \begin{itemize}
+        \item For an electron, de Broglie wavelength is comparable to atomic spacings 
+        \item Davisson \& Germer used nickel crystal to see if elecrons behave like waves 
+        \item Bragg scattering predicts diffracted beams constructively interfere and require a path difference of $n \lambda$
+    \end{itemize}
+    \item Neutron scattering is another clear example \begin{itemize}
+    \item Experiment with ultra cold neutron beam showed that wavelengths of neutrons varied from 1.5 to 3 nm
+    \end{itemize}
+\end{itemize}
+
+\section{Wave Particle Duality}
+
+\begin{itemize}
+    \item Case for wave particle duality \begin{itemize}
+        \item Wave Nature: Light is a wave of the EM field, De Broglie matter waves exist
+        \item Particle Nature: Photoelectric effect, compton scattering, Rutherford scattering
+    \end{itemize}
+    \item Particles can be modelled as wave packets \begin{itemize}
+        \item We can create a wave packet through the superposition of several frequencies using functions of the form $\sum_{n=-\infty}^{\infty} a_n \cos(k_nx - \omega_n t) + b_n \sin(k_n x - \omega_n t)$
+        \item The coefficients and wave vectors are given by boundary conditions and this describes a wave packet moving with velocity $v_n = \frac{\omega_n}{k_n}$
+        \item The resulting wave packet will spread as it travels as a result of it being made up of numerous frequencies
+    \end{itemize}
+    \item Single-slit makes neutron look like a wave \begin{itemize}
+        \item Suppose we have a one-slit neutron scattering experiment
+        \item We see a diffraction pattern with a wave diffracting through a slit
+        \item The angles of the diffraction peaks depend on the slit width
+        \item Can calculate the angles of minima and maxima
+        \item $a \sin T = \lambda_n \implies T = \sin^{-1} (\frac{\lambda_n}{a}) = 2 \times 10^{-5} rad$
+    \end{itemize}
+    \item The double-slit experiment shows wave infterference \begin{itemize}
+        \item The experiment has cold neutrons go through two slits 
+        \item An interference pattern is formed
+        \item This is the same phenomena as waves of light, sound and surface and the classical description of interference of waves works
+        \item If the neutron flux is low enough that no more than one electron passes through the slits, what happens? We still get an interference pattern and there is no definitive answer for why this is the case
+        \item $\lambda_n = d_{slit} \theta_{peak} = (1.2 \times 10^{-4})(1.5 \times 10^{-5}) = 1.8 \times 10^{-9}$
+    \end{itemize}
+    \item Example of diffraction: "Bucky Balls" \begin{itemize}
+        \item Buckministerfullerene is a molecule consisting of 60 C atoms, 1 nm in diameter
+        \item Diffraction is seen in a two slit experiment with 200 m/s molecule bucky balls 
+        \item The de Broglie wavelength is $\frac{h}{mV} = 2.77 \times 10^{-12}$
+        \item To see diffraction, need a large enough angle $(\frac{\lambda}{d})$
+        \item If the detector can resolve angles $\frac{\delta}{D} = 10^{-5}$, the slit satisfies $\frac{\lambda}{d} > \frac{\delta}{D} \implies d < \frac{\lambda D}{\delta} = \frac{(2.77 \times 10^{-12})(1)}{1 \times 10^{-5}} = 277 nm$
+        \item $\delta$ is the resolution
+    \end{itemize}
+    \item Behaviour of particle changes if we get involved \begin{itemize}
+        \item If we put a detector on one slit, we know which slit the particle went through
+        \item Doing this with an electron beam, we can detect the electron without "disturing" it too much
+        \item We no longer see an inference pattern
+        \item This does not depend on how we detect the electon. Double slit interference disappears when we can determine which slit the particle goes through
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
