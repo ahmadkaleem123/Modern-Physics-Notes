@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -364,6 +365,40 @@
         \item This does not depend on how we detect the electon. Double slit interference disappears when we can determine which slit the particle goes through
     \end{itemize}
 
+\end{itemize}
+
+\section{Heisenberg Uncertainty Principle}
+
+\begin{itemize}
+    \item Wave-particle duality has other implications \begin{itemize}
+        \item Single particles behave like waves
+        \item Detecting particle trajectories changes wave like behaviour
+        \item Consider a localized wave packet
+        \item Lets attempt to measure a particles position and momentum
+    \end{itemize}
+    \item Wave packet calculation illustrates uncertainty \begin{itemize}
+        \item Wave packet is a superposition of plane waves given by $A \exp (i(kx - \omega t))$
+        \item Take this over all waves numbers of some function $f(k)$ reflecting the distribution of wave numbers as $\varPsi (x,t) = \int_{k = -\infty}^{\infty} f(k) \exp (i(kx-\omega x)) \, dk$
+        \item Need to have $f(k)$ large around $k \sim k_0$
+        \item $v = \frac{\omega}{k}$, $\bar{h}k = p$, $k = \frac{\omega}{v} = \frac{2 \pi}{\lambda}$, $v = \nu \lambda = \frac{\omega \lambda}{2 \pi}$
+        \item We can write $\Delta k = |\frac{dk}{d \lambda} | \Delta \lambda = \frac{2 \pi}{\lambda ^2} \Delta \lambda$ since $k = \frac{2 \pi}{\lambda}$
+        \item $\Delta x = N \lambda$ so $\Delta x \backsimeq \frac{\lambda ^2}{4 \Delta \lambda} = \frac{1}{4} \frac{2 \pi}{\Delta k} \implies \Delta x \Delta k \backsimeq \frac{\pi}{2}$ and $\Delta x \Delta k \geq \frac{1}{2}$
+        \item Multiplying both sides by $\bar{h}$, we get $\Delta x \Delta p \geq \frac{\bar{h}}{2}$ which is known as the Heisenberg Uncertainty Relationship
+    \end{itemize}
+    \item Practical measurement illustrates principle \begin{itemize}
+        \item Lets think of a practical experiment
+        \item Use photons to measure the position of electron 
+        \item Photons interact with electron and bounce into microscope
+        \item Given a finite aperture of microscope subtending $\alpha$ from electron, $\Delta x \backsimeq \frac{\lambda_{\gamma}}{\sin \alpha}$
+        \item The uncertainty in momentum $\Delta p_x \backsimeq p \sin \alpha = 2 \pi \bar{h} \frac{\sin \alpha}{\lambda_{\gamma}} \implies \Delta x \Delta p_x \backsimeq 2 \pi \bar{h}$
+    \end{itemize}
+    \item Heisenberg Uncertainty Principle is fundamental \begin{itemize}
+        \item Position and momentum: $\Delta x \Delta p_x \geq \frac{1}{2} \bar{h}$
+        \item Time and energy: $\Delta t \Delta E \geq \frac{1}{2} \bar{h}$
+        \item Angular momentum and angle: $\Delta L \Delta \varphi \geq \frac{1}{2} \bar{h}$
+        \item This does not relate to the precision of the apparatus or the technique used for the measurements
+        \item Can be an infinite number of complementary variables
+    \end{itemize}
 \end{itemize}
 
 \end{document}
