@@ -401,4 +401,41 @@
     \end{itemize}
 \end{itemize}
 
+\section{The Schr\"{o}dinger Equation and Wave Functions} \begin{itemize}
+    \item Schr\"{o}dinger found an equation that predicted waves \begin{itemize}
+        \item Light can be modelled with plane waves $A \exp(i(kx-\omega t))$
+        \item This is a solution to the wave equation $\frac{\partial^2 \varPsi }{\partial x^2} = \frac{1}{c^2} \frac{\partial^2 \varPsi}{\partial t^2}$ where $k^2 = \frac{\omega^2}{c^2}$
+        \item Schr\"{o}dinger noted that if $\frac{\partial^2 \varPsi}{\partial x^2} = \alpha \frac{\partial \varPsi}{\partial t}$ then $-k^2 = -i \alpha \omega$
+        \item If $\alpha = - \frac{2mi}{\bar{h}}$ then $-hk^2 = -2m \omega$ so that $\frac{\bar{h}^2k^2}{2m} = \bar{h} \omega$ and using Plancks relationship, $\frac{p^2}{2m} = E$, this implies that it is a particle
+        \item Rearranging gives $i \bar{h} \frac{\partial \varPsi}{\partial t} = - \frac{\bar{h}^2}{2m} \frac{\partial^2 \varPsi}{\partial x^2}$ which is the Schr\"{o}dinger equation for a free particle
+        \item This can be generalized with a potential $V(x)$ as $E \varPsi = \left(\frac{p^2}{2m} + V(x) \right) \varPsi$
+ 
+    \end{itemize}
+    \item The wave function $\varPsi$ has some physical meaning \begin{itemize}
+        \item It is a complex function and so gives interference
+        \item Max Born suggested that it could be a probability density: $| \varPsi(x,t) |^2 \delta x$
+        \item Needs to be normalized so its a probability: $\int_{all space} | \varPsi(x,t) |^2 \, dx = 1$
+        \item Physically, consider a free particle with momentum $\varPsi(x,t) = C \exp (i(kx-\omega t))$
+        \item Then probability density is $| \varPsi(x,t)|^2 = C^2 | \cos(kx - \omega t) + i \sin(kx - \omega t) |^2 = C^2$
+        \item Equal probability to be anywhere
+    \end{itemize}
+    \item Gives interference but what about quanta? \begin{itemize}
+        \item This theory had to explain wave phenomena, explain matter waves and photons, be consistent with classical physics and predict quantization of systems
+        \item By construction, the first two points have been take care of but the third needs to be checked
+        \item Schr\"{o}dinger equation is a differential equation so we need boundary conditions to solve 
+        \item From the free particle "solution" $\varPsi (x,t) = C \exp(i(kx-\omega t))$
+        \item Momentum is constant and given by $p = \bar{h} k$
+        \item Wave function is constant in all of space since equal probability of being anywhere
+        \item Need to confine it within some region
+    \end{itemize}
+    \item Particle confined to circle gives some insight \begin{itemize}
+        \item Consider a toy system
+        \item Particle with mass $m$ free to move in a circular track with radius $R$ ($x$ is an angular coordinate $(0, 2 \pi R)$)
+        \item Solutions to Schr\"{o}dinger Equation are still plane waves: $\varPsi(x,t) = C \exp(i(kx - \omega t))$
+        \item Boundary conditions are periodic: $\varPsi(x,t) = \varPsi(x + 2 \pi nR, t)$
+        \item $\exp (i(kx - \omega t)) = \exp (i(k(x + 2\pi R) - \omega t))$
+        \item $\implies 2 \pi kR = n 2 \pi \implies k_n = \frac{n}{R}$
+        \item $p_n = \bar{h} k_n$ so that it is quantized
+    \end{itemize}
+\end{itemize}
 \end{document}
