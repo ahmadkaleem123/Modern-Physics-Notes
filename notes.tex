@@ -438,4 +438,60 @@
         \item $p_n = \bar{h} k_n$ so that it is quantized
     \end{itemize}
 \end{itemize}
+
+\section{Time-Independent Schr\"{o}dinger Equation} \begin{itemize}
+    \item Wave equation in 1-D can have stationary solutions \begin{itemize}
+        \item Closed systems conserve energy (not a totally unrealistic assumption)
+        \item Examples of real closed systems: frictionless pendulum, isolated or non interacting atomic or molecular systems and stable, non-interacting nuclei
+        \item Many systems are good approximations to being closed
+        \item In such systems, the potential energy must be time-independent: $V(x, t) = V(x)$
+        \item Going back to the Schrodinger equation $i \bar{h} \frac{\partial \varPsi}{\partial t} = - \frac{\bar{h}^2}{2m} \frac{\partial^2 \varPsi}{\partial x^2} + V(x) \varPsi$
+        \item Assume that one can find a solution through seperation of variables. Let  $\varPsi (x,t) = u(x) T(t)$
+        \item Then $i \bar{h} u(x) \frac{dT}{dt} = - \frac{\bar{h}^2 T(t)}{2m} \frac{d^2 u}{dx^2} + V(x)u(x)T(t)$
+        \item $\frac{i \bar{h}}{T(t)} \frac{dT}{dt} = - \frac{\bar{h}^2}{2mu(x)} \frac{d^2 u}{dx^2} + V(x) = E$
+        \item This gives us the "seperation of variables" where the LHS only depends on time and the RHS only depends on $x$
+        \item The equation must hold $\forall x, t$ and therefore must equal a constant
+    \end{itemize}
+    \item Means that time-dependence is simple \begin{itemize}
+        \item Solve first for $T(t)$: $\frac{dT}{dt} = \frac{E}{i \bar{h}} T(t) \implies T(t) = \exp(\frac{Et}{i \bar{h}})$
+        \item So the time dependence is just a phase that is linear in time 
+        \item Apart from interference effects, this doesnt affect the modulus: $| \varPsi(x, t)|^2 = | u(x) \exp(\frac{Et}{i \bar{h}}) | ^2 = |u(x)|^2$ since the exponential has modulus 1
+        \item This leads to the time-independent Schr\"{o}dinger equation: $Eu(x) = - \frac{\bar{h}^2}{2m} \frac{d^2 u}{dx^2} + V(x)u(x)$
+        \item The first RHS term can be interpreted as the kinetic energy and the second RHS term is the potential energy
+        \item The RHS is the "energy operator" for the system
+        \item Need to have $V(x)$ and specified boundary conditions 
+        \item In principle, we can then solve for the spatial dependence. For $V(x) = 0$, we have the wave equation: a free particle is described by plane waves
+        \item We can then use $u(x) \rightarrow \varPsi(x)$ since time dependence does not matter
+    \end{itemize}
+    \item Conditions on $\varPsi(x)$ can be more formally stated \begin{itemize}
+        \item We need solutions to be continuous and single-valued, otherwise $\varPsi(x)$ to describe a physical system
+        \item The integral of the wave function over any interval must be finite otherwise it cannot be interpreted as a probability
+        \item The first derivative of $\varPsi(x)$ must be continuous everywhere. This ensures that the second derivative is well behaved
+        \item The boundary conditions must also be satisfied
+    \end{itemize}
+    \item Solve problem of particle in infinite square well \begin{itemize}
+        \item Consider a closed 1D system
+        \item Particle with mass $m$ freely moving in region $x < |a|$ $V(x) = 0$
+        \item Potential for $x > |a|$ is infinite i.e. $V(x) = \infty$: a particle cannot go beyond $|x| = a$
+        \item Classically, we expect that the particle will move freely in $x < |a|$ and bounce back at each boundary with an equal probability of finding the particle anywhere
+        \item Boundary conditions for a quantum particle: $\varPsi(x) = 0$ for $|x| > a \implies \varPsi(x) = 0$ for $|x| = a$
+        \item This should be integrable and normalizable: $\int_{-a}^{a} | \varPsi(x) |^2 \, dx = C$
+        \item Continuous and Single valued
+    \end{itemize}
+    \item Can now solve Schr\"{o}dinger equation \begin{itemize}
+        \item Inside region $|x| < a$, $\varPsi(x)$ satisfies $E \varPsi(x) = - \frac{\bar{h}^2}{2m} \frac{d^2 \varPsi}{dx^2}$
+        \item Assume $\varPsi(x) = A \cos(kx) + B \sin(kx)$
+        \item This gives $E = \frac{\bar{h}^2k^2}{2m}$ so that energy depends on $k$
+        \item Applying the boundary conditions $\varPsi(-a) = \varPsi(a) = 0$ gives $A \cos(ka) + B \sin(ka) = 0$, $A \cos(-ka) + B \sin(-ka) = 0$, $A \cos(ka) - B \sin(ka) = 0$
+        \item Two possible solutions: $B = 0 \implies ka = \frac{n \pi}{2}$ for $n = 1, 3, 5, ...$, $A = 0 \implies ka = \frac{n \pi}{2}$ for $n = 2, 4, 6, ...$
+        \item Defines possible values of $k$: $k_n = 1, 2, 3, \dots$
+        \item Energy is quantized: $E = \frac{h^2 \pi^2 n^2}{8ma^2}$
+    \end{itemize}
+    \item Let's normalize the wave function \begin{itemize}
+        \item Normalization requires $\int_{all space} | \varPsi(x) |^2 \, dx = 1 \implies \int_{-a}^{a} A^2 \cos^2 (k_n x) \, dx = 1$ 
+        \item Integrating and simplifying $\frac{A^2}{k_n} (\frac{k_nx}{2} + \frac{1}{4} \sin (2 k_n x)) |_{-k_n a}^{k_n a} = 1$
+        \item Thus $A^2 a = 1$ or $A = \frac{1}{\sqrt{a}}$
+        \item $\varPsi_n(x) = \frac{1}{\sqrt{a}} \cos(k_n x)$ or $\varPsi_n(x) = \frac{1}{\sqrt{a}} \sin(k_n x)$ 
+    \end{itemize}
+\end{itemize}
 \end{document}
