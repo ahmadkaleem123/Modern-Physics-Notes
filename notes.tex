@@ -492,6 +492,45 @@
         \item Integrating and simplifying $\frac{A^2}{k_n} (\frac{k_nx}{2} + \frac{1}{4} \sin (2 k_n x)) |_{-k_n a}^{k_n a} = 1$
         \item Thus $A^2 a = 1$ or $A = \frac{1}{\sqrt{a}}$
         \item $\varPsi_n(x) = \frac{1}{\sqrt{a}} \cos(k_n x)$ or $\varPsi_n(x) = \frac{1}{\sqrt{a}} \sin(k_n x)$ 
+        \item The resulting wave functions are $B = 0 \implies ka = \frac{n \pi}{2}$ for $n = 1,3,5,\dots \implies \varPsi_n(x) = \frac{1}{\sqrt{a}} \cos ((\frac{n \pi x}{2a}))$. Similarly $\varPsi_n(x) = \frac{1}{\sqrt{a}} \sin ((\frac{n \pi x}{2a}))$ for $n = 2,4,6, \dots$
+    \end{itemize}
+    \item These solutions have non-trivial behaviour \begin{itemize}
+        \item $N=1$, particle found near the centre
+        \item $N=2$, particle avoids the centre
+        \item $N=3$, particle prefers centre and edges
+        \item $N = 8$, almost uniform
+        \item This agrees with the quantum prediction but not from classical physics
+        \item $E_n$ is $n^2$ times $E_1$
+    \end{itemize}
+    \item Classical Limit and Correspondence Principle \begin{itemize}
+        \item The energy spacing provides a way of seeing what limit we are in :$E_n = \frac{\bar{h}^2 \pi^2 n^2}{8 ma^2}$
+        \item In a quantum scale, we can look at the atomic length scale for an electron 
+        \item Several ways of going to the classical limit: e.g. make size of well macroscopic: $a \sim 10^{-6}$ which makes energy spacings $< 10^{-7} eV$
+        \item The wave function is uniform for any macroscopic energy state. Need a very high energy level, $n \sim 10^4$
+    \end{itemize}
+\end{itemize}
+
+\section{Particle in Finite Square Well}
+
+\begin{itemize}
+    \item The finite square well is a more complex problem \begin{itemize}
+        \item Consider a particle in a potential well. Depth of the well is $V_0$, width is $2a$ and we look at "confined states" i.e. states where total energy $E < V_0$
+        \item This system is an approximation for many physical systems
+        \item More complex boundary conditions
+        \item Classically, it has a simple solution (particle trapped in well, moving back and forth)
+    \end{itemize}
+    \item Solve Schrodinger equation as before \begin{itemize}
+        \item Have to consider two regions: $|x| > a \implies V(x) = V_0$ and $|x| < a \implies V(x) = 0$
+        \item Find solutions in each region and match boundary conditions at transition between one region and the next
+        \item In region 1: $E \varPsi(x) = - \frac{\bar{h}^2}{2m} \frac{d^2 \varPsi}{dx^2} + V_0 \varPsi(x)$ for $|x| > a \implies \frac{d^2 \varPsi}{dx^2} = \frac{2m(V_0-E)}{\bar{h}^2} \varPsi(x)$
+        \item Solutions of the form $\varPsi(x) = C \exp (\pm \kappa x)$ where $\kappa = \frac{\sqrt{2m(V_0 - E)}}{\bar{h}}$
+        \item But expoentially growing solutions would not be normalizable so we reject the solutions $\exp(\kappa x)$ for $x > a$ and $\exp(- \kappa x)$ for $x < -a$
+        \item We are then left with $\varPsi(x) = C \exp(\kappa x)$ for $x < -a$ and $\varPsi(x) = D \exp (- \kappa x)$ for $x > a$
+    \end{itemize}
+    \item Region 2: Solve Schrodinger for $|x| < a$ \begin{itemize}
+        \item Solutions are of the form $\varPsi(x) = A \cos(kx)$ or $\varPsi(x) = B \sin(kx)$
+        \item However boundary conditions are different: doesnt have to go to zero at $x = \pm a$ but we still require continuity
+        \item A lot of algebra
     \end{itemize}
 \end{itemize}
 \end{document}
