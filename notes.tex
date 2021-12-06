@@ -568,4 +568,59 @@
         \item Decay rate also depends on the rate of $\alpha$'s approaching barrier and $E$
     \end{itemize}
 \end{itemize}
+
+\section{Simple Harmonic Oscillator} 
+
+\begin{itemize}
+    \item Classical SHO \begin{itemize}
+        \item We can write the potential as $V(x) = \frac{1}{2} m \omega_c^2 x^2 \implies \frac{d^2 x}{dt^2} = - \omega_c^2 x$
+    \end{itemize}
+    \item Classical solution is simple harmonic motion \begin{itemize}
+        \item Classical solutions are $x(t) = A \sin (\omega t)$ or equivalently $t(x) = \frac{1}{\omega} \sin^{-1} (\frac{x}{A})$
+        \item Start with time independent Schrodinger: $E \varPsi(x) = - \frac{\bar{h}^2}{2m} \frac{d^2 \varPsi}{dx^2} + \frac{1}{2} m \omega_c^2 x^2 \varPsi(x)$
+        \item Simplifying this and making substitutions gives $\frac{d^2 \varPsi}{dy^2} + (\alpha - y^2) \varPsi(y) = 0$
+    \end{itemize}
+    \item We solve this equation. The solutions are Hermite polynomials \begin{itemize}
+        \item For large $y$, $\frac{d^2 \varPsi}{dy^2} = y^2 \varPsi(y)$
+        \item Try $\varPsi(y) = y^n \exp (- \frac{y^2}{2})$
+        \item $\frac{d^2 \varPsi}{dy^2}$ has many terms but goes to $y^{n+2} \exp (- \frac{y^2}{2})$
+        \item This suggests trying a solution of the form $\varPsi(y) = H(y) \exp(-\frac{y^2}{2})$
+        \item Plugging this in and simplifying gives $H'' - 2yH' + (\alpha -1 )H = 0$
+        \item This gives a differential equation for $H(y)$ which can be solved 
+    \end{itemize}
+    \item We solve in the following way: \begin{itemize}
+        \item Assume $H(y) = \sum_{p = 0}^{\infty} a_p y^p$
+        \item Then after finding expressions for $H'$ and $H''$, we get $\sum_{p = 0}^{\infty} ((p+2)(p+1)a_{p+2} - (2p + 1 - \alpha)a_p)y^p = 0$
+        \item This is only true if $(p+2)(p+1) a_{p+2} - (2p + 1 - \alpha) a_p = 0$
+        \item We need to consider the asymptotic behaviour 
+        \item $\frac{a_{p+2}}{a_p} \rightarrow_{p \rightarrow \infty} \frac{2}{p}$
+        \item Thus $H(y) \rightarrow \exp (y^2) \implies \varPsi(y) \rightarrow \exp (\frac{y^2}{2})$
+        \item Need to terminate the power series: Divide into two series, even and odd terms 
+        \item For each series, we can require $\alpha$ so that for some $p$, $2p + 1 - \alpha = 0 \implies \alpha = 2p + 1$
+        \item If we do this for one series, the other diverges so we set starting coefficient in the other series to 0
+        \item Energy is then quantized: $\alpha = 2n+1 = \frac{2E}{\bar{h} \omega_c} \implies E_n = \bar{h} \omega_c (n + \frac{1}{2})$
+    \end{itemize}
+    \item The results are Hermite polynomials \begin{itemize}
+        \item $H_0(y) = 1$, $H_1(y) = y$, $H_2(y) = y^2 - 1$, $H_3(y) = y^3 - 3y$, $H_4(y) = y^4 - 6y^2 + 3$, $H_5(y) = y^5 - 10y^3  +15y$
+        \item Symmetric about $y = 0$ for $n$ even
+        \item Antisymmetric for $n$ odd 
+    \end{itemize}
+    \item Now we can put together solutions \begin{itemize}
+        \item The exponential term damps out the wave functions eventually 
+        \item We have functions with specific symmetry 
+        \item Energy rises uniformly with $n$: $E_n =\bar{h} \omega_c (n + \frac{1}{2})$
+        \item The lowest energy state "Zero-point energy" has $E_0 = \frac{1}{2} \bar{h} \omega_c$
+        \item Every quantum oscillator is in motion in ground state 
+        \item Normally an extremely small amount of energy
+        \item There is a significant evanescent wave i.e. the oscillator has a significant probability of being outside the classically allowed region 
+    \end{itemize}
+    \item Is the Correspondence Principle violated? \begin{itemize}
+        \item We can normalize the wave functions. Tedious but not difficult 
+        \item Going to larger $n$, the behaviour tends towards the classical solution 
+        \item Oscillator is spending most of its time near the boundary 
+        \item Still is a significant probability of being in the classically forbidden region 
+        \item Larger $n$ will show that the Correspondence principle holds 
+    \end{itemize}
+\end{itemize}
+
 \end{document}
